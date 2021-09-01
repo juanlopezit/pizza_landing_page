@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kaisei Tokumin', serif;
+}
+
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon{
+    display: block;
+    z-index: 1;
+    animation: moveLeft 1s ease-in;
+
+}
+
+
+header{
+    background: #D38312;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    padding: 48px;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+img{
+    display: block;
+    height: 490px;
+    margin-left: 80px;
+    animation: moveUp 1s ease-in;
+}
+
+.text{
+    width: 50%;
+    color: #fff;
+}
+
+.text h1{
+    font-size: 120px;
+    margin-bottom: 20px;
+    animation: moveRight 1s ease-in;
+    
+}
+
+.text h2{
+    font-size: 30px;
+    animation: moveLeft 1s ease-in;
+}
+
+.text a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 50px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    animation: moveUp 1s ease-in;
+}
+
+.wave{
+    height: 100px;
+    width: 100%;
+    background: #D38312;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.links{
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background: black;
+    transition: all 1s ease;
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+
+.one{
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+}
+
+.two{
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+
+@keyframes moveLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveUp{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* Responsive */
+
+/* Ipad Pro */
+
+@media screen and (max-width:1024px){
+    img{
+        height: 220px;
+    }
+    .text{
+        height: 490px;
+    }
+    .text h1{
+        font-size: 100px;
+    }
+    .links{
+        justify-content: flex-start;
+        line-height: 200px;
+    }
+}
+
+/* Ipad */
+
+@media screen and (max-width:768px){
+    img{
+        height: 160px;
+    }
+    .text h1{
+        font-size: 100px;
+    }
+    .links{
+        justify-content: center;
+        height: 70vh;
+        line-height: 150px;
+    }
+}
+
+/* Surface Duo */
+
+@media screen and (max-width:540px){
+    img{
+        height: 277px;
+    }
+    .text h1{
+        font-size: 100px;
+    }
+    .links{
+        width: 65%;
+        height: 100vh;
+    }
+}
+
+/* Galaxy fold */
+
+@media screen and (max-width:280px){
+    img{
+        display: none;
+    }
+    .text h1{
+        font-size: 50px;
+        text-align: left;
+    }
+    .links{
+        width: 100vw;
+    }
+}
